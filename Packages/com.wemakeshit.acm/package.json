@@ -12,7 +12,7 @@
   "vpmDependencies": {
     "com.vrchat.avatars": ">=3.0.0"
   },
-  "url": "https://github.com/OWNER/ACM/releases/download/v0.8.2/com.wemakeshit.acm-0.8.2.zip",
+  "url": "https://github.com/WeMakeShit/ACM/releases/download/0.8.2/com.wemakeshit.acm-0.8.2.zip",
   "keywords": [
     "vrchat",
     "avatars",
