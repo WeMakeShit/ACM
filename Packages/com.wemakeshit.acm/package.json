@@ -1,0 +1,22 @@
+{
+  "name": "com.wemakeshit.acm",
+  "displayName": "Avatar Creation Manager",
+  "version": "0.8.3",
+  "description": "A Unity editor tool by DTAA for managing VRChat avatar poses, dances, toggles and expression menus, with validation and recovery tools.",
+  "unity": "2022.3",
+  "author": {
+    "name": "DTAA / WeMakeShit",
+    "url": "https://ko-fi.com/wemakeshit"
+  },
+  "vpmDependencies": {
+    "com.vrchat.avatars": ">=3.0.0"
+  },
+  "url": "https://github.com/WeMakeShit/ACM/releases/download/0.8.3/com.wemakeshit.acm-0.8.3.zip",
+  "keywords": [
+    "vrchat",
+    "avatars",
+    "expression menus",
+    "editor",
+    "animations"
+  ]
+}
