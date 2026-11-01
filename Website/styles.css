@@ -67,7 +67,7 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
   display: block;
   width: 100%;
   max-width: 1000px;
-  aspect-ratio: 21 / 9;
+  height: clamp(150px, 20vw, 220px);
   object-fit: cover;
   object-position: center;
   border: 1px solid rgba(184, 148, 246, .4);
@@ -177,7 +177,7 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
   .install-card { align-items: stretch; flex-direction: column; padding: 1.15rem; }
   .addToVccBlock { flex-wrap: wrap; }
   .vccUrlField { min-width: 100%; }
-  .acm-banner { border-radius: 12px; }
+  .acm-banner { height: 150px; border-radius: 12px; }
 }
 
 .badge {
