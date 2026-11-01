@@ -1,5 +1,8 @@
 :root {
   color-scheme: light dark;
+  --acm-purple: #8b5cf6;
+  --acm-violet: #b794f6;
+  --acm-panel: rgba(25, 21, 45, 0.86);
 }
 
 * {
@@ -7,13 +10,13 @@
 }
 
 body {
-  padding: 0;
+  padding: 3rem 1.25rem;
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background:
+    radial-gradient(circle at 50% -20%, rgba(126, 87, 255, .36), transparent 42rem),
+    linear-gradient(145deg, #0e0d18 0%, #151127 55%, #0d0c15 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--neutral-foreground-rest);
 }
@@ -32,8 +35,8 @@ body {
   flex-direction: column;
 }
 
-.content {
-  max-width: 1000px;
+.site-shell {
+  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
 }
@@ -51,8 +54,45 @@ body {
 }
 
 h1 {
-  margin-bottom: 0.5rem;
+  margin: .4rem 0 .5rem;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  letter-spacing: -.045em;
 }
+
+h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
+
+.hero { text-align: center; margin-bottom: 1.25rem; }
+
+.acm-banner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(184, 148, 246, .4);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .45), 0 0 45px rgba(131, 82, 255, .18);
+}
+
+.eyebrow { color: var(--acm-violet); font-size: .72rem; font-weight: 700; letter-spacing: .14em; margin-top: 1.5rem; }
+.hero-description { max-width: 44rem; line-height: 1.55; }
+.publisher { margin-top: .35rem; }
+
+.install-card {
+  align-items: center;
+  background: linear-gradient(115deg, rgba(104, 62, 194, .22), var(--acm-panel));
+  border: 1px solid rgba(184, 148, 246, .3);
+  border-radius: 16px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 1.35rem 1.5rem;
+}
+
+.install-copy p { color: var(--neutral-foreground-hover); margin: 0; max-width: 29rem; }
+.install-card .eyebrow, .packages-section .eyebrow { margin-top: 0; }
 
 .caption1 {
   font-size: 1rem;
@@ -66,9 +106,12 @@ h1 {
 }
 
 .packages {
-  margin: 0.5rem 0 1rem 0;
-  max-width: 90%;
-  padding: 0.25rem;
+  background: var(--acm-panel);
+  border: 1px solid rgba(184, 148, 246, .22);
+  border-radius: 14px;
+  margin: .75rem 0 1rem;
+  max-width: 100%;
+  padding: .55rem;
   display: flex;
   flex: 1;
 }
@@ -86,9 +129,9 @@ h1 {
 }
 
 .searchBlock {
-  margin-top: 1rem;
+  margin-top: .75rem;
   width: 100%;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .searchBlock .root {
@@ -100,7 +143,7 @@ h1 {
 }
 
 .vccUrlField {
-  min-width: 450px;
+  min-width: 300px;
   max-width: 90%;
   flex-grow:1;
 }
@@ -126,15 +169,15 @@ h1 {
   color: var(--neutral-foreground-rest);
 }
 
-.bannerImage {
-  aspect-ratio: 5 / 1;
-  border-radius: 6px;
-  max-width: 90%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 0.25rem;
+.packages-section { margin-top: 2.25rem; }
+.section-heading { display: flex; justify-content: space-between; }
+
+@media (max-width: 720px) {
+  body { padding: 1.5rem .9rem; }
+  .install-card { align-items: stretch; flex-direction: column; padding: 1.15rem; }
+  .addToVccBlock { flex-wrap: wrap; }
+  .vccUrlField { min-width: 100%; }
+  .acm-banner { border-radius: 12px; }
 }
 
 .badge {
