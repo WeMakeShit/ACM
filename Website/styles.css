@@ -10,10 +10,14 @@
 }
 
 body {
-  padding: 3rem 1.25rem;
+  padding: 2rem 1rem;
   margin: 0;
-  min-width: 100vw;
+  min-width: 0;
   min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     radial-gradient(circle at 50% -20%, rgba(126, 87, 255, .36), transparent 42rem),
     linear-gradient(145deg, #0e0d18 0%, #151127 55%, #0d0c15 100%);
@@ -36,8 +40,8 @@ body {
 }
 
 .site-shell {
-  max-width: 1060px;
-  width: 100%;
+  max-width: 680px;
+  width: min(100%, 680px);
   margin: 0 auto;
 }
 
@@ -66,8 +70,8 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
 .acm-banner {
   display: block;
   width: 100%;
-  max-width: 1000px;
-  height: clamp(150px, 20vw, 220px);
+  max-width: 680px;
+  height: 108px;
   object-fit: cover;
   object-position: center;
   border: 1px solid rgba(184, 148, 246, .4);
@@ -85,14 +89,18 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
   border: 1px solid rgba(184, 148, 246, .3);
   border-radius: 16px;
   display: flex;
-  gap: 1.5rem;
-  justify-content: space-between;
-  margin: 2rem auto;
-  padding: 1.35rem 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.25rem auto;
+  padding: 1.1rem 1.2rem;
 }
 
-.install-copy p { color: var(--neutral-foreground-hover); margin: 0; max-width: 29rem; }
+.install-copy { text-align: center; }
+.install-copy p { color: var(--neutral-foreground-hover); margin: 0; max-width: 34rem; }
 .install-card .eyebrow, .packages-section .eyebrow { margin-top: 0; }
+
+.addToVccBlock { flex-wrap: wrap; justify-content: center; width: 100%; }
 
 .caption1 {
   font-size: 1rem;
@@ -143,8 +151,9 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
 }
 
 .vccUrlField {
-  min-width: 300px;
-  max-width: 90%;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
   flex-grow:1;
 }
 
@@ -169,15 +178,16 @@ h2 { margin: .25rem 0 .45rem; font-size: 1.35rem; }
   color: var(--neutral-foreground-rest);
 }
 
-.packages-section { margin-top: 2.25rem; }
+.packages-section { margin-top: 1.25rem; }
 .section-heading { display: flex; justify-content: space-between; }
 
 @media (max-width: 720px) {
-  body { padding: 1.5rem .9rem; }
-  .install-card { align-items: stretch; flex-direction: column; padding: 1.15rem; }
-  .addToVccBlock { flex-wrap: wrap; }
+  body { align-items: flex-start; padding: 1.5rem .9rem; }
+  .install-card { align-items: stretch; padding: 1.15rem; }
+  .addToVccBlock { align-items: stretch; gap: .45rem; }
+  .addToVccBlock .ms-2 { margin-left: 0; }
   .vccUrlField { min-width: 100%; }
-  .acm-banner { height: 150px; border-radius: 12px; }
+  .acm-banner { height: 82px; border-radius: 12px; }
 }
 
 .badge {
